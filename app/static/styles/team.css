@@ -1,0 +1,42 @@
+body{
+   
+    background: linear-gradient(184deg, rgb(249, 243, 82) 0%, rgb(231, 231, 33) 50%, rgb(233, 219, 20) 96%);
+    height: 100%;
+    border-top: 2px solid rgb(248, 214, 173);
+}
+
+
+.bg-body-tertiary{
+    background: rgb(17, 31, 235);
+    background: linear-gradient(184deg, rgb(39, 73, 241) 0%,rgb(248, 246, 249) 0%,rgb(253, 248, 254) 0%);
+
+   
+}
+
+.mb-3{
+    background: rgb(71, 28, 228);
+    font-size: 18px;
+    
+   
+  
+    
+}
+
+.card{
+    box-shadow: rgb(252, 247, 247) 0px 22px 70px 4px; 
+    background-color: rgb(65, 65, 207);
+    padding: 0 10px  0 20px;
+    color: rgb(237, 237, 15); 
+   
+    border: 3px solid rgb(250, 245, 239); 
+    font-size: 18px ;
+    margin: 10px 0 0 15px;
+    display: inline-block;
+   
+
+}
+
+.my-btn{
+    color: rgb(252, 250, 247);
+    
+}

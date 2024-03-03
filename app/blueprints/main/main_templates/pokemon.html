@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+
+{%block title%}
+pokemon world
+
+{%endblock%}
+
+
+{%block  styles%} 
+
+
+
+{%endblock%}
+
+{%block content%}
+{%include "includes/nav.html"%}
+<form method="post">
+    <div class="mb-3">
+      <label for="text" class="form-label">pokemon name or id</label>
+      {{ form.name_or_id(class="form-control", id="name_or_id") }} 
+    </div>
+    {{ form.submit_btn (class= ".btn") }} 
+  </form>
+
+  {% if pokemons %}
+  <div class="card" style="width: 18rem;">
+    <img src="{{pokemons.sprite}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-name">{{pokemons.name}}</h5>
+      <p class="card-text">Pokemons attributes will show:(Hit Power), (Defense), (Attack), (Ability)</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{pokemons.hp}}</li>
+        <li class="list-group-item">{{pokemons.defense}}</li>
+        <li class="list-group-item">{{pokemons.attack}}</li>
+        <li class="list-group-item">{{pokemons.ability}}</li>
+      </ul>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+      
+
+  {%endif%}
+
+{%endblock%}

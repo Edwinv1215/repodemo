@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}My Pokemon{% endblock %}
+{%block  styles%} 
+
+<link rel="stylesheet" href="../static/styles/team.css">
+
+{%endblock%}
+
+{% block content %}
+{%include './includes/nav.html'%}
+  
+  
+    {% for pokemon in caught_pokemon%}
+    <div class="card">
+      <img src="{{pokemon.sprite_img}}" class="card-img-top" alt="...">
+      <div>
+        <p >{{'name'}}:  {{pokemon.name}}<br>
+          {{'base_hp'}}: {{pokemon.base_hp}} <br>
+          {{'base_attack'}}: {{pokemon.base_attack}} <br>
+          {{'base_defense'}}: {{pokemon.base_defense}} 
+          
+        
+        </p>
+  
+      <a href="{{url_for('main.remove', pokemon_name=pokemon.name)}}" class="btn my-btn">remove</a>
+       </a>
+      
+      </div>
+    </div>
+    {% endfor %}
+  
+{% endblock %}

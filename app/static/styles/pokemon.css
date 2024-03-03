@@ -1,0 +1,47 @@
+body{
+    background: rgb(72, 4, 198);
+    background: linear-gradient(184deg, rgb(42, 51, 233) 0%, rgb(42, 26, 215) 50%, rgb(10, 92, 214) 96%);
+    height: 100VH;
+    border-top: 2px solid rgb(244, 244, 243);
+}
+.bg-body-tertiary{
+    background: rgb(219, 216, 220);
+    background: linear-gradient(184deg, rgb(236, 230, 237) 0%,rgb(236, 248, 18) 0%,rgb(227, 250, 25) 0%);
+
+   
+}
+
+.mb-3{
+    background: rgb(52, 22, 246);
+    font-size: 18px;
+    
+   
+  
+    
+}
+
+
+
+.card{
+    box-shadow: rgb(252, 247, 247) 0px 22px 70px 4px; 
+    background-color: rgb(34, 31, 213);
+    margin: auto;
+    padding-left: 50px;
+    color: rgb(40, 40, 242); 
+    width: 20rem;
+    border: 3px solid rgb(244, 243, 240); 
+    font-size: 22px ;
+
+}
+
+
+.btn{
+    color: rgb(211, 220, 74);
+    box-shadow: rgb(239, 234, 239) 10px 22px 77px 14px;
+}
+
+.btn:hover{
+    color: rgb(66, 21, 244);
+    box-shadow: rgb(62, 188, 242) 10px 22px 77px 14px;
+    background-color: rgb(33, 177, 238);
+}

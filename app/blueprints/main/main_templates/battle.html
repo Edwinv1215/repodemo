@@ -1,0 +1,61 @@
+{% extends 'base.html'%}
+
+{%block title%}
+
+ BATTLE
+{%endblock%}
+
+{%block styles%}
+<link rel="stylesheet" href="../static/styles/team.css">
+{%endblock%}
+
+{%block  content%}
+{%include './includes/nav.html'%}
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        {{ form.username(class="form-control", id="username") }}
+    </div>
+    <button type="submit" class="btn my-btn">Search</button>
+    
+</form>
+
+<h1>team 1</h1>
+{% for pokemon in my_pokemons%}
+<div class="card">
+  <img src="{{pokemon.sprite_img}}" class="card-img-top" alt="...">
+  <div>
+    <p >{{'name'}}:  {{pokemon.name}}<br>
+      {{'base_hp'}}: {{pokemon.base_hp}} <br>
+      {{'base_attack'}}: {{pokemon.base_attack}} <br>
+      {{'base_defense'}}: {{pokemon.base_defense}} 
+      
+    
+    </p>
+
+  
+  </div>
+</div>
+{% endfor %}
+
+<h1>team 2</h1>
+{% for pokemon in other_user_pokemon %}
+<div class="card">
+  <img src="{{pokemon.sprite_img}}" class="card-img-top" alt="...">
+  <div>
+    <p >{{'name'}}:  {{pokemon.name}}<br>
+      {{'base_hp'}}: {{pokemon.base_hp}} <br>
+      {{'base_attack'}}: {{pokemon.base_attack}} <br>
+      {{'base_defense'}}: {{pokemon.base_defense}} 
+      
+    
+    </p>
+
+  
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
